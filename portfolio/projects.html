@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Name | Projects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600;700&family=Unbounded:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+
+<div class="note" id="note">
+  <div class="wrap note-in">
+    <p>Template tip: click any dashed box to preview a picture from your device. To keep it, add an &lt;img&gt; inside that box in the HTML.</p>
+    <button type="button" id="note-x">Dismiss</button>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="index.html"><span class="badge">YN</span>Your Name</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="know-me.html">Know me</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="contact.html">Contact me</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page">
+    <div class="wrap">
+      <div class="page-head">
+        <p class="eyebrow">Projects</p>
+        <h1 class="title">Things I have made</h1>
+        <div class="filters" role="group" aria-label="Filter projects by role">
+          <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-filter="creator" aria-pressed="false">Creator</button>
+          <button type="button" class="chip" data-filter="artist" aria-pressed="false">Artist</button>
+          <button type="button" class="chip" data-filter="designer" aria-pressed="false">Designer</button>
+          <button type="button" class="chip" data-filter="developer" aria-pressed="false">Developer</button>
+        </div>
+        <p class="count" id="count" aria-live="polite">Showing 6 projects</p>
+      </div>
+
+      <!-- One <article> per project. data-type must be creator, artist, designer or developer.
+           Copy a whole <article> to add a project. Replace href="#" with your project link. -->
+      <div class="grid">
+        <article class="card" data-type="designer">
+          <div class="slot r-43" data-label="Project image (4:3)"></div>
+          <div class="card-body">
+            <span class="tag t-rose">Designer</span>
+            <h3>Brand identity</h3>
+            <p>A logo, colour and type system for a client. Add your role and the result.</p>
+            <a href="#">View project</a>
+          </div>
+        </article>
+        <article class="card" data-type="developer">
+          <div class="slot r-43" data-label="Project image (4:3)"></div>
+          <div class="card-body">
+            <span class="tag t-oat">Developer</span>
+            <h3>Web app</h3>
+            <p>What it does, the stack you used and a link to the code or the live site.</p>
+            <a href="#">View project</a>
+          </div>
+        </article>
+        <article class="card" data-type="artist">
+          <div class="slot r-43" data-label="Project image (4:3)"></div>
+          <div class="card-body">
+            <span class="tag t-peach">Artist</span>
+            <h3>Illustration series</h3>
+            <p>Medium, size and the idea behind the work.</p>
+            <a href="#">View project</a>
+          </div>
+        </article>
+        <article class="card" data-type="creator">
+          <div class="slot r-43" data-label="Project image (4:3)"></div>
+          <div class="card-body">
+            <span class="tag t-blush">Creator</span>
+            <h3>Content series</h3>
+            <p>Where it was published, how long it ran and how people responded.</p>
+            <a href="#">View project</a>
+          </div>
+        </article>
+        <article class="card" data-type="designer">
+          <div class="slot r-43" data-label="Project image (4:3)"></div>
+          <div class="card-body">
+            <span class="tag t-rose">Designer</span>
+            <h3>App interface</h3>
+            <p>The problem, the screens you designed and what changed for users.</p>
+            <a href="#">View project</a>
+          </div>
+        </article>
+        <article class="card" data-type="developer">
+          <div class="slot r-43" data-label="Project image (4:3)"></div>
+          <div class="card-body">
+            <span class="tag t-oat">Developer</span>
+            <h3>Open-source tool</h3>
+            <p>Who it helps, how it works and where to find the repository.</p>
+            <a href="#">View project</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span>&copy; 2026 Your Name</span>
+    <span>Creator &middot; Artist &middot; Designer &middot; Developer</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/projects.js"></script>
+</body>
+</html>

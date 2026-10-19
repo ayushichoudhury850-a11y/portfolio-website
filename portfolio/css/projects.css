@@ -1,0 +1,20 @@
+/* PROJECTS: role filter buttons and the grid of project cards. */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);font:500 .9rem/1 var(--font-body);cursor:pointer}
+.chip:hover{border-color:var(--fg)}
+.chip[aria-pressed="true"]{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+.count{font-family:var(--font-mono);font-size:.76rem;color:var(--muted);margin-top:2px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:20px}
+.card{display:grid;align-content:start;gap:14px;padding:10px 10px 20px;background:var(--surface);border:1px solid var(--line);border-radius:26px;min-width:0;transition:transform .25s}
+.card:hover{transform:translateY(-4px)}
+.card .slot{border-radius:18px}
+.card-body{display:grid;gap:8px;padding:2px 12px 0}
+.card .tag{justify-self:start}
+.card h3{font-family:var(--font-display);font-weight:600;font-size:1.05rem;line-height:1.25}
+.card p{color:var(--muted);font-size:.94rem}
+.card a{font-weight:600;font-size:.92rem;width:fit-content}
+
+@media (prefers-reduced-motion:reduce){
+  .card{transition:none}
+}

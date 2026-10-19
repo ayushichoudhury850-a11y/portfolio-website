@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Me | Ayushi</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="site-header"><nav class="container nav" aria-label="Main">
+<a href="index.html" class="logo" aria-label="Home">AC</a><!-- Replace YN with your initials -->
+<button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+<ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">Know Me</a></li><li><a href="contact.html" class="active" aria-current="page">Contact Me</a></li></ul></nav></header>
+<main>
+<section class="container contact-grid">
+<div><p class="eyebrow">CONTACT ME</p><h1>Let's create something together.</h1><br>
+<p>Recruiters, collaborators, fellow students and creative people: you are welcome to reach out.</p><br>
+
+<form id="contact-form" novalidate>
+<div class="form-field"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" autocomplete="name"><span class="field-error" id="name-error"></span></div>
+<div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email"><span class="field-error" id="email-error"></span></div>
+<div class="form-field"><label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="What is this about?"><span class="field-error" id="subject-error"></span></div>
+<div class="form-field"><label for="message">Message</label><textarea id="message" name="message" rows="6" placeholder="Write your message"></textarea><span class="field-error" id="message-error"></span></div>
+<button class="btn btn-filled" type="submit">Check my message</button>
+<div id="form-message" class="form-message" role="status" aria-live="polite"></div>
+</form></div>
+<aside><h2>Other ways to reach me</h2><ul class="contact-list">
+<li><span>EMAIL</span>ayushi.choudhury2025@vitstudent.ac.in</li>
+<li><span>LINKEDIN</span><a href="https://www.linkedin.com/in/ayushi-choudhury-95152328a/?isSelfProfile=true">[LinkedIn profile URL]</a></li>
+<li><span>GITHUB</span><a href="#">[GitHub profile URL]</a></li>
+<li><span>INSTAGRAM / ART</span><a href="C:\Users\Dell\Desktop\WIE CHAPTER\art portfolio\index.html" target="_blank" rel="noopener">[Check out my Art Gallery]</a></li></ul>
+
+<br><div class="img-frame about-photo"><span>Artwork here</span><img src="pictures/poster.jpeg" alt="Featured artwork" onerror="this.style.display='none'"></div></aside>
+</section>
+</main>
+<footer class="site-footer"><p style="margin:auto">&copy; Ayushi Choudhury. Made with care, curiosity and a lot of coffee.</p>
+<p style="margin:.4rem auto 0"><a href="about.html">Know Me</a><a href="contact.html">Contact Me</a></p></footer>
+<script src="script.js"></script>
+</body></html>

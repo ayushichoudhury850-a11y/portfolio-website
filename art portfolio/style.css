@@ -1,0 +1,82 @@
+/* ===== Colour palette and fonts (change them here once) ===== */
+:root{
+  --cream:#F8F4EC; --ivory:#FFFCF6; --ocean:#527C8A; --navy:#172D45; --brick:#A74343; --beige:#E7DED0;
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:"Jost",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+/* ===== Base styles ===== */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}           /* smooth jump to sections, no JavaScript */
+body{font-family:var(--sans);background:var(--cream);color:var(--navy);line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15}
+h1{font-size:clamp(2.8rem,7vw,5rem)}
+h2{font-size:clamp(1.9rem,4vw,2.8rem)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ocean);outline-offset:3px}
+.container{width:min(1140px,100% - 3rem);margin-inline:auto}
+section{scroll-margin-top:5rem}       /* stops the sticky nav covering section titles */
+/* ===== Navigation ===== */
+.site-header{position:sticky;top:0;z-index:10;background:var(--navy);border-bottom:1px solid var(--ocean)}
+.nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 2rem;padding:1rem 0}
+.brand{font-family:var(--serif);font-size:1.5rem;color:var(--cream);text-decoration:none}
+.nav-links{display:flex;flex-wrap:wrap;gap:.4rem 2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;letter-spacing:.06em;border-bottom:1px solid transparent;transition:color .25s,border-color .25s}
+.nav-links a:hover{color:#9CC3CF;border-bottom-color:var(--brick)}
+/* ===== Hero ===== */
+.hero{display:grid;grid-template-columns:1fr;justify-items:center;text-align:center;padding:7rem 0}
+.eyebrow{text-transform:uppercase;letter-spacing:.25em;font-size:.8rem;color:var(--brick);margin-bottom:1rem}
+.tagline{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--ocean);margin:1rem 0}
+.hero-description{max-width:46ch;margin:0 auto 2rem}
+.button{display:inline-block;padding:.9rem 2rem;background:var(--navy);color:var(--cream);text-decoration:none;letter-spacing:.06em;border:1px solid var(--navy);transition:background .25s,color .25s,border-color .25s}
+.button:hover{background:var(--brick);border-color:var(--brick)}
+
+/* ===== Image frames and placeholders =====
+   The label is drawn by ::before. The .art-image sits on top and shows your photo.
+   If the photo file is missing, the label simply stays visible: no broken images. */
+.art-frame{position:relative;background:var(--beige);border:1px solid var(--beige);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.art-frame::before{content:"Artwork photo here";color:var(--ocean);font-size:.9rem;letter-spacing:.1em}
+.art-image{position:absolute;inset:0;background-image:var(--art);background-repeat:no-repeat;background-position:center;background-size:contain}
+/* ".cover" on an .art-image makes it crop instead of fit */
+/* ===== Gallery ===== */
+.gallery{padding:3rem 0}
+.section-heading{text-align:center;margin-bottom:4rem}
+.section-heading p{color:var(--ocean);margin-top:.6rem}
+.category{margin-bottom:5rem}
+.category-title{font-size:1.8rem;padding-bottom:.8rem;margin-bottom:2rem;border-bottom:1px solid var(--beige)}
+.category-note{margin:-1rem 0 2rem;color:var(--ocean)}
+/* Grid: 3 columns on desktop, 2 on tablet, 1 on mobile (see media queries) */
+.art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem 2rem}
+.art-card{background:var(--ivory);padding:.9rem;border:1px solid var(--beige);transition:transform .35s,box-shadow .35s}
+.art-card:hover{transform:scale(1.02);box-shadow:0 14px 30px rgba(23,45,69,.12)}
+.art-card .art-frame{aspect-ratio:3/4}     /* same portrait ratio for every card */
+.art-card figcaption{display:flex;flex-direction:column;padding:1rem .3rem .3rem}
+.art-title{font-family:var(--serif);font-size:1.15rem}
+.art-meta{font-size:.85rem;color:var(--ocean)}
+/* Commissioned section: a soft beige panel and a small red label make it feel more personal */
+.commissioned{background:var(--beige);padding:2.5rem;border-radius:2px}
+.commissioned .category-title{border-bottom-color:var(--ocean)}
+.commission-label{text-transform:uppercase;letter-spacing:.18em;font-size:.7rem;color:var(--brick);margin-bottom:.2rem}
+/* ===== About ===== */
+.about{background:var(--ivory);border-block:1px solid var(--beige);padding:5rem 0;text-align:center}
+.about-inner{max-width:680px}
+.about h2{margin-bottom:1.2rem}
+/* ===== Contact ===== */
+.contact{padding:5rem 0;text-align:center}
+.contact p{margin:.8rem 0 2rem}
+.contact-list{list-style:none;display:inline-block;text-align:left}
+.contact-list li{padding:.6rem 0;border-bottom:1px solid var(--beige)}
+.contact-list span{display:inline-block;min-width:6rem;color:var(--ocean)}
+.contact-list a:hover{color:var(--brick)}
+/* ===== Footer ===== */
+.site-footer{background:var(--navy);color:var(--cream);text-align:center;padding:2rem 1.5rem;font-size:.9rem}
+/* ===== Responsive ===== */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:3rem;padding:3rem 0}
+  .art-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+  .art-grid{grid-template-columns:1fr}
+  .commissioned{padding:1.5rem 1rem}
+  .nav{justify-content:center;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
